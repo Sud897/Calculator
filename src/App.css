@@ -1,0 +1,95 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgb(113, 250, 252), white);
+}
+.container {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background-color: rgb(192, 247, 247);
+  box-shadow: 20px 20px 50px grey;
+  text-align: center;
+  width: 300px;
+  padding: 10px;
+  border: 10px solid rgb(192, 247, 247);
+  border-radius: 10px;
+}
+.keyboard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(60px, auto);
+}
+.output {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  background-color: rgb(250, 250, 250);
+  min-height: 60px;
+  width: 284px;
+  font-size: 25px;
+  border: 0px;
+  border-radius: 7px;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+/* input[type="text"] {
+  height: 60px;
+  width: 284px;
+  font-size: 25px;
+  border: 0px;
+  border-radius: 7px;
+  text-align: right;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  padding: 10px;
+} */
+button {
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: rgb(245, 235, 227);
+  cursor: pointer;
+  margin: 6px;
+}
+#clear {
+  background-color: aqua;
+  grid-column: 1/3;
+  color: rgb(248, 248, 248);
+}
+#backspace {
+  background-color: aqua;
+  color: rgb(248, 248, 248);
+}
+#operator {
+  background-color: aqua;
+  color: rgb(248, 248, 248);
+}
+#result {
+  background-color: aqua;
+  grid-column: 3/5;
+  color: rgb(248, 248, 248);
+}
+
+input:focus,
+input:active {
+  outline: none;
+}
+button:hover,
+button:focus,
+button:active {
+  outline: none;
+  background-color: rgb(249, 225, 207);
+}
+#clear:hover,
+#backspace:hover,
+#operator:hover,
+#result:hover {
+  background-color: rgb(63, 209, 209);
+}
